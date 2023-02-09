@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<header>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script></header>
+<body>
+
+    <div class="letter">
+        <div class="letter-front">
+          <button id="open-letter">Abrir carta</button>
+        </div>
+        <div class="letter-back">
+            <div class="letter-back">
+                <img src="convite.png">
+              </div>
+              
+        </div>
+      </div>
+      
+      </div>
+
+</body>
+
+  <script>
+    
+   document.getElementById("open-letter").addEventListener("click", function() {
+    document.querySelector(".letter").classList.toggle("open");
+    });
+
+
+  </script>

@@ -1,0 +1,57 @@
+.letter {
+    width: 300px;
+    height: 400px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .letter-front, .letter-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 1s;
+  }
+  
+  .letter-front {
+    background-color: lightgray;
+    transform: rotateY(0deg);
+  }
+  
+  .letter-back {
+    background-color: white;
+    transform: rotateY(-90deg);
+    left: 100%;
+  }
+  
+  #open-letter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .open .letter-back {
+    transform: rotateY(0deg);
+    left: 0;
+    width: 345px;
+    height: 500px;
+    overflow: hidden;
+    border: 1px;
+    border-color: black;
+  }
+  
+  .open .letter-front {
+    transform: rotateY(90deg);
+  }
+  .open .letter-back img {
+    width: 100%;
+    height: auto;
+
+  }
