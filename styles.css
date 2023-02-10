@@ -1,12 +1,15 @@
 .letter {
-    width: 300px;
-    height: 400px;
+    width: 660px;
+    height: 380px;
     position: relative;
     margin: 0 auto;
     overflow: hidden;
+    border-radius: 5px;
   }
   
   .letter-front, .letter-back {
+    background-image: url("frente.png");
+    background-size: cover;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -27,14 +30,13 @@
   
   #open-letter {
     position: absolute;
-    top: 50%;
+    top: 79%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: blue;
-    color: white;
     border: none;
-    padding: 10px 20px;
     cursor: pointer;
+    color: white;
+    background-color: initial;
   }
   
   .open .letter-back {
