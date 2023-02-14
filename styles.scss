@@ -1,5 +1,6 @@
 body {
-  background: #323641; }
+  background: #323641;
+}
 
 .letter-image {
   position: absolute;
@@ -10,7 +11,8 @@ body {
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 .animated-mail {
   position: absolute;
@@ -18,8 +20,9 @@ body {
   width: 200px;
   -webkit-transition: .4s;
   -moz-transition: .4s;
-  transition: .4s; }
-  .animated-mail .body {
+  transition: .4s;
+  
+  .body {
     position: absolute;
     bottom: 0;
     width: 0;
@@ -27,8 +30,10 @@ body {
     border-style: solid;
     border-width: 0 0 100px 200px;
     border-color: transparent transparent #e95f55 transparent;
-    z-index: 2; }
-  .animated-mail .top-fold {
+    z-index: 2;
+  }
+  
+  .top-fold {
     position: absolute;
     top: 50px;
     width: 0;
@@ -42,15 +47,19 @@ body {
     transform-origin: 50% 0%;
     transition: transform .4s .4s, z-index .2s .4s;
     border-color: #cf4a43 transparent transparent transparent;
-    z-index: 2; }
-  .animated-mail .back-fold {
+    z-index: 2;
+  }
+  
+  .back-fold {
     position: absolute;
     bottom: 0;
     width: 200px;
     height: 100px;
     background: #cf4a43;
-    z-index: 0; }
-  .animated-mail .left-fold {
+    z-index: 0;
+  }
+  
+  .left-fold {
     position: absolute;
     bottom: 0;
     width: 0;
@@ -58,8 +67,10 @@ body {
     border-style: solid;
     border-width: 50px 0 50px 100px;
     border-color: transparent transparent transparent #e15349;
-    z-index: 2; }
-  .animated-mail .letter {
+    z-index: 2;
+  }
+  
+  .letter {
     left: 20px;
     bottom: 0px;
     position: absolute;
@@ -72,7 +83,10 @@ body {
     -moz-transition: .6s .4s;
     transition: .6s .4s;
     background-size: cover;
-    background-position: center; }
+    background-position: center;
+    
+  }
+}
 
 .shadow {
   position: absolute;
@@ -86,25 +100,33 @@ body {
   -webkit-transform: translateX(-50%);
   -moz-transition: .6s;
   border-radius: 100%;
-  background: radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
-  z-index: 0; }
+  background: radial-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.0), rgba(0,0,0,0.0));
+  z-index: 0;
+}
 
-.letter-image:hover .animated-mail {
-  transform: translateY(1000px);
-  -webkit-transform: translateY(1000px);
-  -moz-transform: translateY(1000px);
-  transform: scale(3); }
-.letter-image:hover .animated-mail .top-fold {
-  transition: transform .8s, z-index .6s;
-  transform: rotateX(180deg);
-  -webkit-transition: transform .8s, z-index .6s;
-  -webkit-transform: rotateX(180deg);
-  -moz-transition: transform .6s, z-index .4s;
-  -moz-transform: rotateX(180deg);
-  z-index: 0; }
-.letter-image:hover .animated-mail .letter {
-  height: 200px; }
-.letter-image:hover .shadow {
-  width: 250px; }
-
-/*# sourceMappingURL=styles.css.map */
+  .letter-image:hover {
+    .animated-mail {
+      transform: translateY(1000px);
+      -webkit-transform: translateY(1000px);
+      -moz-transform: translateY(1000px);
+      transform: scale(3);
+    }
+    
+    .animated-mail .top-fold {
+      transition: transform .8s, z-index .6s;
+      transform: rotateX(180deg);
+      -webkit-transition: transform .8s, z-index .6s;
+      -webkit-transform: rotateX(180deg);
+      -moz-transition: transform .6s, z-index .4s;
+      -moz-transform: rotateX(180deg);
+      z-index: 0;
+    }
+    
+    .animated-mail .letter {
+      height: 200px;
+    }
+    
+    .shadow {
+      width: 250px;
+    }
+  }
