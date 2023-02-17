@@ -4,7 +4,7 @@ body {
 
 .letter-image {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   width: 200px;
   height: 200px;
@@ -30,7 +30,7 @@ body {
     border-style: solid;
     border-width: 0 0 100px 200px;
     border-color: transparent transparent #e95f55 transparent;
-    z-index: 2;
+    z-index: 1;
   }
   
   .top-fold {
@@ -75,8 +75,8 @@ body {
     bottom: 0px;
     position: absolute;
     width: 160px;
-    height: 60px;
-    background-image: url(convite.png);
+    height: 80px;
+    background-image: url(convite-1.png);
     z-index: 1;
     overflow: hidden;
     -webkit-transition: .6s .4s;
@@ -84,7 +84,7 @@ body {
     transition: .6s .4s;
     background-size: cover;
     background-position: center;
-    
+
   }
 }
 
@@ -105,11 +105,19 @@ body {
 }
 
   .letter-image:hover {
+    .letter{
+      z-index: 5;
+      width: 150px;
+      height: auto;
+      margin-bottom: -20px;
+
+    }
     .animated-mail {
       transform: translateY(1000px);
       -webkit-transform: translateY(1000px);
       -moz-transform: translateY(1000px);
       transform: scale(3);
+      z-index: 0;
     }
     
     .animated-mail .top-fold {
@@ -120,13 +128,32 @@ body {
       -moz-transition: transform .6s, z-index .4s;
       -moz-transform: rotateX(180deg);
       z-index: 0;
+      
     }
     
     .animated-mail .letter {
       height: 200px;
+      animation-name: fold-down;
     }
     
     .shadow {
       width: 250px;
+      z-index: -1;
+    }
+  }
+
+  @keyframes fold-up {
+    from {
+    }
+    to {
+      transform: rotateX(140deg);
+    }
+  }
+  
+  @keyframes fold-down {
+    from {
+    }
+    to {
+      transform: rotateX(-140deg);
     }
   }
