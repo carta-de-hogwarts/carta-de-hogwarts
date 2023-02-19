@@ -161,6 +161,9 @@ body {
       animation-delay: 3s;
     }
   }
+  audio {
+    display: none;
+  }
 
   @keyframes fold-up {
     from {

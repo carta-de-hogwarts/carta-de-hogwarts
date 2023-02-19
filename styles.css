@@ -134,6 +134,9 @@ body {
 .letter-image:hover .animated-mail::before {
   animation-delay: 3s; }
 
+audio {
+  display: none; }
+
 @keyframes fold-up {
   to {
     transform: rotateX(140deg); } }
