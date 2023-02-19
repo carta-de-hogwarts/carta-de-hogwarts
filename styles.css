@@ -26,7 +26,7 @@ body {
     height: 0;
     border-style: solid;
     border-width: 0 0 100px 200px;
-    border-color: transparent transparent #e95f55 transparent;
+    border-color: transparent transparent #E9D5BD transparent;
     z-index: 1; }
   .animated-mail .top-fold {
     position: absolute;
@@ -41,14 +41,14 @@ body {
     -moz-transition: transform .4s .4s, z-index .2s .4s;
     transform-origin: 50% 0%;
     transition: transform .4s .4s, z-index .2s .4s;
-    border-color: #cf4a43 transparent transparent transparent;
+    border-color: #ddcbb4 transparent transparent transparent;
     z-index: 2; }
   .animated-mail .back-fold {
     position: absolute;
     bottom: 0;
     width: 200px;
     height: 100px;
-    background: #cf4a43;
+    background: #cebca6;
     z-index: 0; }
   .animated-mail .left-fold {
     position: absolute;
@@ -57,7 +57,7 @@ body {
     height: 0;
     border-style: solid;
     border-width: 50px 0 50px 100px;
-    border-color: transparent transparent transparent #e15349;
+    border-color: transparent transparent transparent #e6d7c3;
     z-index: 2; }
   .animated-mail .letter {
     left: 20px;
@@ -71,6 +71,17 @@ body {
     -webkit-transition: .6s .4s;
     -moz-transition: .6s .4s;
     transition: .6s .4s;
+    background-size: cover;
+    background-position: center;
+    opacity: 0; }
+  .animated-mail .selo {
+    left: 40%;
+    bottom: 22%;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-image: url(selo_hogwarts.png);
+    z-index: 2;
     background-size: cover;
     background-position: center; }
 
@@ -93,13 +104,17 @@ body {
   z-index: 5;
   width: 150px;
   height: auto;
-  margin-bottom: -20px; }
+  margin-bottom: -20px;
+  opacity: 1;
+  animation-name: none;
+  animation-duration: 0.5s; }
 .letter-image:hover .animated-mail {
-  transform: translateY(1000px);
+  transform: translateY(500px);
   -webkit-transform: translateY(1000px);
   -moz-transform: translateY(1000px);
   transform: scale(3);
-  z-index: 0; }
+  z-index: 0;
+  animation-duration: 1s; }
 .letter-image:hover .animated-mail .top-fold {
   transition: transform .8s, z-index .6s;
   transform: rotateX(180deg);
@@ -107,19 +122,24 @@ body {
   -webkit-transform: rotateX(180deg);
   -moz-transition: transform .6s, z-index .4s;
   -moz-transform: rotateX(180deg);
-  z-index: 0; }
+  z-index: 0;
+  animation-duration: 1s; }
 .letter-image:hover .animated-mail .letter {
   height: 200px;
   animation-name: fold-down; }
 .letter-image:hover .shadow {
+  animation-duration: 0.1ms;
   width: 250px;
   z-index: -1; }
+.letter-image:hover .animated-mail::before {
+  animation-delay: 3s; }
 
 @keyframes fold-up {
   to {
     transform: rotateX(140deg); } }
 @keyframes fold-down {
   to {
+    animation-delay: 2s;
     transform: rotateX(-140deg); } }
 
 /*# sourceMappingURL=styles.css.map */
