@@ -15,12 +15,13 @@ body {
 }
 
 .animated-mail {
-  position: absolute;
   height: 150px;
   width: 200px;
   -webkit-transition: .4s;
   -moz-transition: .4s;
   transition: .4s;
+  position: relative;
+  animation: flutuar 2s ease-in-out infinite;
   
   .body {
     position: absolute;
@@ -132,7 +133,8 @@ body {
       -moz-transform: translateY(1000px);
       transform: scale(3);
       z-index: 0;
-      animation-duration: 1s;
+      animation-duration: 3s;
+      animation: zoom-in-zoom-out .4s;
     }
     
     .animated-mail .top-fold {
@@ -164,7 +166,7 @@ body {
   audio {
     display: none;
   }
-
+  
   @keyframes fold-up {
     from {
     }
@@ -179,5 +181,27 @@ body {
     to {
       animation-delay: 2s;
       transform: rotateX(-140deg);
+    }
+  }
+  @keyframes flutuar {
+    0% {
+      transform: translatey(0);
+    }
+    50% {
+      transform: translatey(-15px);
+    }
+    100% {
+      transform: translatey(0);
+    }
+  }
+
+  @keyframes zoom-in-zoom-out {
+    0% {
+      transform: scale(1, 1);
+      transition-duration: 0s;
+    }
+    100% {
+      transform: scale(2, 2);
+      transition-duration: 0s;
     }
   }

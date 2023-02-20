@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script></header>
 <body>
-  <audio loop autoplay>
+  <audio id="audio" loop autoplay volume="1">
     <source src="hp.mp3" type="audio/mpeg">
     <source src="hp.ogg" type="audio/ogg">
     <source src="hp.wav" type="audio/wav">
@@ -26,6 +26,9 @@
     
    document.getElementById("open-letter").addEventListener("click", function() {
     document.querySelector(".").classList.toggle("open");
+
+  const audio = document.getElementById("audio");
+  audio.play();
     });
 
 
