@@ -169,5 +169,16 @@ audio {
   100% {
     transform: scale(2, 2);
     transition-duration: 0s; } }
+.bottonconfirma {
+  background-color: #E9D5BD;
+  padding: 15px;
+  width: fit-content;
+  border-radius: 2px; }
+
+.bottonconfirma:hover {
+  background-color: #cebca6; }
+
+a {
+  text-decoration: none; }
 
 /*# sourceMappingURL=styles.css.map */

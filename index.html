@@ -32,7 +32,9 @@
     <source src="hp.ogg" type="audio/ogg">
     <source src="hp.wav" type="audio/wav">
   </audio>
-  <button id="botao-confirma">Confirmar presença</button>
+  <div class="bottonconfirma">
+    <a href="https://api.whatsapp.com/send?phone=5516991004355&text=Olá,%20gostaria%20de%20confirmar%20minha%20presença%20no%20seu%20aniversário!">Confirmar presença</a>
+  </div>
   <button id="botao-inv"></button>
   <div class="letter-image">
     <div class="animated-mail">
@@ -60,16 +62,11 @@
   });
       });
     }
-    id = document.querySelector('#botao-confirma').addEventListener("click", function(event){
-      fetch("https://cors.io/?https://api.whatsapp.com/send?phone=5516991004355&text=Olá,%20gostaria%20de%20confirmar%20minha%20presença%20no%20seu%20aniversário!"),{
-        method: "POST",
-        mode: 'no-cors',
-        AccessControlAllowOrigin: all,
-        headers: {
-      "Content-type": "application/json; charset=UTF-8"
-  }
-      }
-      event.stopPropagation()
-    })
+    function zap(){
+      url = ""
+      var oReq = new XMLHttpRequest();
+      oReq.open("POST", url, true);
+      oReq.send();
+    }
 
   </script>
