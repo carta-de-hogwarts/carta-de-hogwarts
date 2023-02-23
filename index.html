@@ -61,9 +61,10 @@
       });
     }
     id = document.querySelector('#botao-confirma').addEventListener("click", function(event){
-      fetch("https://api.whatsapp.com/send?phone=5516991004355&text=Olá,%20gostaria%20de%20confirmar%20minha%20presença%20no%20seu%20aniversário!"),{
+      fetch("https://cors.io/?https://api.whatsapp.com/send?phone=5516991004355&text=Olá,%20gostaria%20de%20confirmar%20minha%20presença%20no%20seu%20aniversário!"),{
         method: "POST",
         mode: 'no-cors',
+        AccessControlAllowOrigin: all,
         headers: {
       "Content-type": "application/json; charset=UTF-8"
   }
