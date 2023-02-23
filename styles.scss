@@ -141,7 +141,7 @@ body {
       transform: translateY(500px);
       -webkit-transform: translateY(1000px);
       -moz-transform: translateY(1000px);
-      transform: scale(3);
+      transform: scale(3.8);
       z-index: 0;
       animation-duration: 3s;
       animation: zoom-in-zoom-out .4s;
@@ -215,3 +215,9 @@ body {
       transition-duration: 0s;
     }
   }
+
+@media only screen and (max-width: 1920px){
+    .letter {
+    zoom: 100%;
+}
+}
